@@ -1,70 +1,118 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Title: **RBAC UI Dashboard**
 
-## Available Scripts
+## Overview
+The **RBAC UI Dashboard** is a web-based interface for managing users and roles within a system. It utilizes Role-Based Access Control (RBAC) to provide an intuitive interface for managing users and their assigned roles. The application features user authentication and allows users to perform actions based on their roles. This project is built using **React** for the frontend and uses **localStorage** for handling authentication.
 
-In the project directory, you can run:
+## Features
+- **Login Page**: Provides user authentication with a username and password.
+- **User Management**: Display, add, and manage users within the system.
+- **Role Management**: Manage different roles that can be assigned to users.
+- **Sidebar Navigation**: Access different management pages (Users, Roles) via a sidebar.
+- **Logout**: Logs the user out and redirects to the login page.
+  
+## Technologies Used
+- **React**: Frontend framework for building the user interface.
+- **React Router**: Handles routing for different views (Login, Users, Roles).
+- **localStorage**: Stores authentication tokens to persist login sessions.
+- **CSS/Tailwind CSS**: For styling and creating responsive layouts.
 
-### `npm start`
+## Setup Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
+To run this project locally, you need to have the following installed on your system:
+- **Node.js** (version 12 or above)
+- **npm** (Node package manager, usually comes with Node.js)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Clone the Repository
+Start by cloning the repository to your local machine:
 
-### `npm test`
+```bash
+git clone https://github.com/irinj/Admin-Dashboard.git
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Install Dependencies
+Navigate into the project directory:
 
-### `npm run build`
+```bash
+cd rbac-ui
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install the required dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Running the Application
 
-### `npm run eject`
+To start the development server, use the following command:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This will launch the application on `http://localhost:3000` (or another available port). You can open the browser to this address to see the project running.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Build for Production
+To build the project for production, run:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm run build
+```
 
-## Learn More
+This will create a `build` folder containing the optimized production files.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### GitHub Repository Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+rbac-ui/
+├── src/
+│   ├── components/       # Contains UI components (Login, UserTable, RoleTable, etc.)
+│   ├── App.js            # Main component for routing
+│   └── index.js          # Entry point for React app
+├── public/
+│   ├── index.html        # HTML file
+├── .gitignore            # Specifies files and folders to ignore in git
+├── package.json          # Project metadata and dependencies
+└── README.md             # This file
+```
 
-### Code Splitting
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 1. **Login**
+To login, enter the following credentials:
+- **Username**: `admin`
+- **Password**: `password`
 
-### Analyzing the Bundle Size
+Once logged in, you will be redirected to the **Users Management** page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 2. **Users Management**
+- View a list of users.
+- Option to add or manage users can be implemented based on role-based access control.
 
-### Making a Progressive Web App
+### 3. **Roles Management**
+- Manage different roles and assign them to users.
+  
+### 4. **Logout**
+Click on the **Logout** button to clear your session and redirect to the login page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Notes
+- **Authentication**: For the purposes of this demo, the application uses a hardcoded username and password (`admin`/`password`) for login. The authentication is handled by checking these credentials and saving an authentication token in `localStorage`.
+- **localStorage**: The authentication token is stored in `localStorage` to persist the session after a page refresh.
 
-### Advanced Configuration
+## Contributing
+We welcome contributions to improve this project! If you'd like to contribute, please fork the repository and submit a pull request. Follow these steps:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -am 'Add feature'`).
+5. Push to your forked repository (`git push origin feature-branch`).
+6. Submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-### Deployment
+## Contact
+For questions or suggestions, feel free to contact the repository owner at `irinjossy04@gmail.com`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
